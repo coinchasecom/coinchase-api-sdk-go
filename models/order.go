@@ -5,14 +5,14 @@ import (
 )
 
 type PlaceRequestParams struct {
-	Volume    string `json:"volume"`     // 限价表示下单数量, 市价买单时表示买多少钱, 市价卖单时表示卖多少币
-	Price     string `json:"price"`      // 下单价格, 市价单不传该参数
-	Pair    string `json:"pair"`     // 交易对, btcusdt, bccbtc......
+	Volume string `json:"volume"` // quote volume (base currency)
+	Price  string `json:"price"`  // quote price (quote currency)
+	Pair   string `json:"pair"`   // BTC/USDT, ETH/USDT ...
 }
 
 type PlaceReturn struct {
-	Code int         `json:"code"`
-	Err  string      `json:"err"`
+	Code int    `json:"code"`
+	Err  string `json:"err"`
 	Data struct {
 		ID           string          `json:"id"`
 		Pair         string          `json:"pair"`
