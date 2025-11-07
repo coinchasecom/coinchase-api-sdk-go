@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+
 	"github.com/coinchasecom/coinchase-api-sdk-go/models"
 	"github.com/coinchasecom/coinchase-api-sdk-go/services"
 )
